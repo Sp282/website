@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in page</title>
+    <script>
+        function validate() {
+            var name= document.getElementById("user").value;
+            var psw= document.getElementById("psw").value;
+            if(name.length==0){
+                alert("Please fill the name");
+                return false;
+            }
+            else if(psw.length==0) {
+                alert("please fill the password");
+                return false
+            }
+            else{
+                alert("Login was successful");
+                return true;
+            }
+        }
+    </script>
+    <style>
+       body{
+           background-image: url("images/login.jpg");
+       }
+        form{
+            color: white;
+            padding-top: 25%;
+            padding-left: 25%;
+       }
+/*.box{*/
+    /*border: 2px solid red;*/
+    /*height: 100px;*/
+    /*width: 500px;*/
+    /*text-align: center;*/
+    /*padding-left: 10%;*/
+/*}*/.checkbox{
+           margin-left: 3%;
+     }
+    </style>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <form class="form-horizontal" onsubmit="validate()">
+        <!--<div class="box">-->
+        <div class="form-group">
+            <label class="control-label col-sm-2" form="Username">Username</label>
+            <div class="col-sm-5">
+                <input type="email" class="form-control" id="user" placeholder="Enter email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" form="Password">Password</label>
+            <div class="col-sm-5">
+                <input type="password" class="form-control" id=psw placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <input type="checkbox">Remember Me
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <a href="home.html" class="btn btn-primary" role="button" onclick="return validate()">Sign In
+                <!--<button type="submit" class="btn btn-primary">Submit-->
+                <!--</button>-->
+                </a>
+                <a href="Reg.html" class=" col-sm-offset-2 btn btn-primary" role="button">Sign Up
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

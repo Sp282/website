@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+    <script>
+        function check() {
+            if (document.pay[3].checked == true)
+
+                var res = confirm("Are you sure about your order?");
+            if (res) {
+                alert("Order confirmed")
+            } else {
+                alert("Your order wasn't confirmed");
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <style>
+        body{
+            background-image: url("images/reg.jpg");
+        }
+        .container{
+            position: absolute;
+            top:40%;
+            color: white;
+        }
+        h1{
+            font-family: Algerian;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="container col-md-offset-4">
+    <h1>How Would You Like to pay?</h1>
+<div class="radio">
+    <label>
+        <a href="debit.html">
+        <input type="radio" name="pay">Debit Card
+        </a>
+    </label>
+</div>
+    <div class="radio">
+        <label>
+            <a href="https://paytm.com/">
+            <input type="radio" name="pay">Paytm
+            </a>
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="pay">Cash on delivery
+        </label>
+    </div>
+</div>
+</body>
+</html>

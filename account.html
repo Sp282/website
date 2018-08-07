@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account</title>
+
+    <style>
+        body{
+            background-image: url("images/reg.jpg");
+        }
+        form{
+            color: white;
+            padding-top: 15%;
+            padding-left: 30%;
+            font-family: "Arial Black";
+        }
+        ::placeholder{
+            font-family:"Lucida Handwriting" ;
+            color: #0D3349;
+        }
+        textarea{
+            height: 80px;
+            width: 265px;
+            font-family: "Lucida Handwriting";
+            color: #0D3349;
+        }
+        .c{
+            font-family: "Lucida Handwriting";
+            color: #0D3349;
+        }
+    </style>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-sm-2" form="Username"> Username </label>
+            <div class="col-sm-4">
+                <input type="Username" class="form-control" placeholder="Username">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" form="Password">Password</label>
+            <div class="col-sm-4">
+                <input type="Password" class="form-control" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" form="E-mail">E-mail</label>
+            <div class="col-sm-4">
+                <input type="E-mail" class="form-control" placeholder="E-mail">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" form="phone number">Phone Number</label>
+            <div class="col-sm-4">
+                <input type="mobile number" class="form-control" placeholder="Mobile No.">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" form="address">Address</label>
+            <div class="col-sm-4 c">
+                <textarea class=form-control rows="3" col="5">House no 24, 25th road, 6th cross, Basanti Colony, Bangalore </textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <a href="home.html" class="btn btn-primary" role="button">
+                    Back
+                    <!--<input type="Submit" class="btn btn-primary">-->
+                </a>
+                <input type="Reset"class=" col-sm-offset-2 btn btn-primary">
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

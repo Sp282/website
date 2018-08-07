@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <script>
+        function validate() {
+
+        var name= document.getElementById("user").value;
+        var psw= document.getElementById("psw").value;
+        var email= document.getElementById("email").value;
+        var no= document.getElementById("no").value;
+        var text= document.getElementById("text").value;
+        if(name.length==0){
+            alert("Please fill the name");
+            return false;
+        }
+        else if(psw.length==0) {
+            alert("please fill the password");
+            return false
+        }
+        else if(email.length==0) {
+            alert("Please fill in email")
+            return false;
+        }
+        else if(no.length<10){
+            alert("please fill in mobile number")
+            return false;
+        }else if(text.length==0){
+            alert("please fill in address")
+            return false;
+        }
+        else{
+            alert("Login was successful");
+            return true;
+        }
+        }
+    </script>
+    <style>
+        body{
+            background-image: url("images/reg.jpg");
+        }
+        form{
+            color: white;
+            padding-top: 15%;
+            padding-left: 30%;
+            font-family: "Arial Black";
+        }
+        ::placeholder{
+            font-family:"Lucida Handwriting" ;
+        }
+        textarea{
+            height: 80px;
+            width: 265px;
+            color: black;
+        }
+    </style>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <form class="form-horizontal" onsubmit="validate()">
+        <div class="form-group">
+            <label class="control-label col-sm-2" form="Username"> Username </label>
+            <div class="col-sm-4">
+                <input type="Username" class="form-control" id="user" placeholder="Username">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" form="Password">Password</label>
+            <div class="col-sm-4">
+                <input type="Password" class="form-control" id="psw" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" form="E-mail">E-mail</label>
+            <div class="col-sm-4">
+              <input type="E-mail" class="form-control" id="email" placeholder="E-mail">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" form="phone number">Phone Number</label>
+            <div class="col-sm-4">
+                <input type="mobile number" class="form-control" id="no" placeholder="Mobile No."onkeypress="if(this.value.length==10) return false">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" form="address">Address</label>
+            <div class="col-sm-4">
+                <textarea rows="3" col="1000" id="text"> </textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <a href="login.html" class="btn btn-primary" role="submit" onclick="return validate()" >
+                    Submit
+                    <!--<input type="Submit" class="btn btn-primary">-->
+                </a>
+                <input type="Reset"class=" col-sm-offset-2 btn btn-primary">
+            </div>
+    </div>
+    </form>
+</div>
+</body>
+</html>
